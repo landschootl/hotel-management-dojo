@@ -1,3 +1,6 @@
+![Logo github Copilot](https://miro.medium.com/v2/resize:fit:100/0*oRRpMJ9XqkRnYLhW.png)
+![Logo github Copilot](https://miro.medium.com/v2/resize:fit:180/1*_PxenCnInwfF8Syr0D4UaA.png)
+
 # Java Hotel Management System - GitHub Copilot Dojo
 Bienvenue dans le Dojo GitHub Copilot pour apprendre à utiliser cette nouvelle technologie passionnante tout en développant un système de gestion d'hôtel en Java. Ce dojo se concentre sur la gestion des réservations d'hôtel à l'aide de GitHub Copilot.
 
@@ -12,6 +15,8 @@ Assurez-vous d'avoir installé les outils suivants avant de commencer :
 ## Avant de commencer :
 * Clonez le projet : `git clone https://github.com/landschootl/hotel-management-dojo.git`.
 * Ouvrez le dans Visual Studio Code.
+* Installez les dépendances Maven avec la commande `mvn install`.
+* Vous pouvez démarrer le projet (via la classe `Main`) et jouer les tests unitaires (via la classe `Main`).
 
 ## Exercices
 
