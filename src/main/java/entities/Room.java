@@ -5,9 +5,6 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- * Represents a room in a hotel.
- */
 @Getter
 @Setter
 @Builder

@@ -10,10 +10,6 @@ import java.util.Scanner;
 import static java.lang.System.in;
 import static java.lang.System.out;
 
-/**
- * The Main class represents the entry point of the hotel management system.
- * It provides a command-line interface for users to interact with the system.
- */
 public class Main {
 
     private static final Scanner scanner = new Scanner(in);
