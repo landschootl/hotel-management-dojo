@@ -1,14 +1,14 @@
 import entities.Booking;
 import entities.Hotel;
 import entities.Room;
-import exceptions.*;
-import org.junit.jupiter.api.BeforeAll;
+import exceptions.BookingNotFoundException;
+import exceptions.ParamNotValidException;
+import exceptions.RoomNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -66,7 +66,7 @@ public class ManageHotelTest {
     }
 
     @Test
-    public void should_return_booking_when_search() throws BookingNotFoundException, RoomNotFoundException, ParamNotValidException {
+    public void should_return_booking_when_search() throws BookingNotFoundException, ParamNotValidException {
         // the cas if BOOKING with date equals checkInDate
         Booking result = MANAGE_HOTEL.searchBooking(BOOKING.getRoomNumber(), BOOKING.getFullName(), BOOKING.getCheckInDate());
         assertEquals(BOOKING, result);
