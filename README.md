@@ -59,4 +59,8 @@ La méthode doit permettre d'annuler une réservation à partir de sa référenc
 La méthode doit permettre de suggérer une chambre à partir de sa capacité et de la date de réservation. Si aucune chambre n'est trouvée, une exception doit être levée.
 Assurez-vous de gérer les exceptions en cas d'indisponibilité de la chambre, de paramètres invalides, etc.
 
+### Exercices bonus
+* Générez une nouvelle méthode `calculatePrice` dans la classe `ManageHotel` qui permet de calculer le prix d'une réservation à partir de sa référence. Si la réservation n'est pas trouvée, une exception doit être levée.
+* Générez une nouvelle méthode `calculateCA` dans la classe `ManageHotel` qui permet de calculer le chiffre d'affaire de l'hôtel à partir d'une date de début et d'une date de fin. Si aucune réservation n'est trouvée, une exception doit être levée.
+
 Vous avez terminé ! Vous avez maintenant un système de gestion d'hôtel fonctionnel et vous avez appris à utiliser GitHub Copilot ! 🚀
