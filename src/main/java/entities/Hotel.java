@@ -41,13 +41,20 @@ public class Hotel {
 
     public boolean checkRoomAvailability(int roomNumber, LocalDate checkInDate, LocalDate checkOutDate) {
         //get all bookings for this room
-        List<Booking> bookingsForRoom = getBookingsForRoom(roomNumber);
+        List<Booking> bookingsForRoom;
+        bookingsForRoom = getBookingsForRoom(roomNumber);
 
         //check if room is available
-        return bookingsForRoom.stream()
-                .filter(booking -> ((checkInDate.isBefore(booking.getCheckInDate()) || checkInDate.isEqual(booking.getCheckInDate())) && checkOutDate.isAfter(booking.getCheckInDate()))
-                        || ((checkInDate.isBefore(booking.getCheckOutDate())) && (checkOutDate.isAfter(booking.getCheckOutDate()) || checkOutDate.isEqual(booking.getCheckOutDate())))
-                        || ((checkInDate.isAfter(booking.getCheckInDate()) || checkInDate.isEqual(booking.getCheckInDate())) && (checkOutDate.isBefore(booking.getCheckOutDate()) || checkOutDate.isEqual(booking.getCheckOutDate()))))
-                .findFirst().isEmpty();
+        if(bookingsForRoom.isEmpty()) {
+            return true;
+        }
+        for(Booking booking : bookingsForRoom) {
+            if(((checkInDate.isBefore(booking.getCheckInDate()) || checkInDate.isEqual(booking.getCheckInDate())) && checkOutDate.isAfter(booking.getCheckInDate()))
+                    || ((checkInDate.isBefore(booking.getCheckOutDate())) && (checkOutDate.isAfter(booking.getCheckOutDate()) || checkOutDate.isEqual(booking.getCheckOutDate())))
+                    || ((checkInDate.isAfter(booking.getCheckInDate()) || checkInDate.isEqual(booking.getCheckInDate())) && (checkOutDate.isBefore(booking.getCheckOutDate()) || checkOutDate.isEqual(booking.getCheckOutDate())))) {
+                return false;
+            }
+        }
+        return true;
     }
 }
