@@ -91,12 +91,12 @@ public class Main {
     }
 
     private static LocalDate getCheckIngDate() {
-        out.print("Enter check int date: ");
+        out.print("Enter check in date (YYYY-MM-DD): ");
         return LocalDate.parse(scanner.next());
     }
 
     private static LocalDate getCheckOutDate() {
-        out.print("Enter check out date: ");
+        out.print("Enter check out date (YYYY-MM-DD): ");
         return LocalDate.parse(scanner.next());
     }
 
@@ -106,7 +106,7 @@ public class Main {
     }
 
     private static LocalDate getDate() {
-        out.print("Enter date: ");
+        out.print("Enter date (YYYY-MM-DD): ");
         return LocalDate.parse(scanner.next());
     }
 

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.claranet</groupId>
-    <artifactId>hotel-management-dojo-mvn</artifactId>
+    <artifactId>hotel-management-dojo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
